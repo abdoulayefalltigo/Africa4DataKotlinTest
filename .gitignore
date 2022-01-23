@@ -9,6 +9,7 @@
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
 .gradle
+.idea
 /local.properties
 /.idea/caches
 /.idea/libraries
