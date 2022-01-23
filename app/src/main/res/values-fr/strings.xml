@@ -1,0 +1,48 @@
+<resources xmlns:ns0="http://schemas.android.com/tools">
+
+<string name="app_name">KotlinTest</string>
+    <string name="title_home">Accueil</string>
+
+    
+    <string name="title_user">Utilisateur</string>
+    <string name="title_settings">Réglages</string>
+    <string name="back_to_home">Retourner au dashboard</string>
+    <string name="postal_code">Code postal :</string>
+    <string name="street_code">Code rue :</string>
+    <string name="street">Rue :</string>
+    <string name="first_name">Prénom :</string>
+    <string name="last_name">Nom de famille</string>
+    <string name="country">Pays</string>
+    <string name="name">Nom</string>
+    <string name="user_info">Informations utilisateur :</string>
+    <string name="location_info">Informations sur l\'adresse :</string>
+    <string name="birthday">Date d\'anniversaire :</string>
+    <string name="address">Adresse :</string>
+    <string name="city">Ville :</string>
+
+
+    
+    <string name="infos">Informations sur l\'appareil</string>
+    <string name="temperature">Température :</string>
+    <string name="_20">20</string>
+    <string name="delete_device">Supprimer l\'appareil</string>
+    <string name="update_success">Mise à jour réussie !</string>
+    <string name="user_could_not_be_updated">L\'utilisateur n\'a pas pu être mis à jour</string>
+    <string name="user_has_been_updated">L\'utilisateur a été mis à jour</string>
+    <string name="update_fail">La mise à jour ne peut pas être effectuée !</string>
+    <string name="lights">Lumières</string>
+    <string name="heaters">Radiateurs</string>
+    <string name="roller_shutter">Volet roulant</string>
+    <string name="enter_name">Veuillez entrer du texte</string>
+    <string name="ok">Sauvegarder</string>
+    <string name="cancel" ns0:ignore="ButtonCase">Annuler</string>
+    <string name="o">o</string>
+    <string name="intensity">Intensité :</string>
+    <string name="percentage">%</string>
+    <string name="position">Position :</string>
+    <string name="device_name">Nom</string>
+    <string name="device_mode">État :</string>
+    <string name="device_deleted">Appareil supprimé</string>
+    <string name="do_you_really_want_to_delete_this_device">Confirmer la suppression ?</string>
+
+</resources>

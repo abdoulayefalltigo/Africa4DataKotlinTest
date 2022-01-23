@@ -1,3 +1,47 @@
-<resources>
-    <string name="app_name">App</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">KotlinTest</string>
+    <string name="title_home">Home</string>
+
+    <!-- USER -->
+    <string name="title_user">User</string>
+    <string name="title_settings">Settings</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="postal_code">Postal Code :</string>
+    <string name="street_code">Street Code :</string>
+    <string name="street">Street :</string>
+    <string name="first_name">First Name :</string>
+    <string name="last_name">Last Name</string>
+    <string name="country">Country</string>
+    <string name="name">Name</string>
+    <string name="user_info">User info :</string>
+    <string name="location_info">Location info :</string>
+    <string name="birthday">Birthday :</string>
+    <string name="address">Address :</string>
+    <string name="city">City :</string>
+
+
+    <!-- DEVICES DETAILS -->
+    <string name="infos">Device infos </string>
+    <string name="temperature">Temperature :</string>
+    <string name="_20">20</string>
+    <string name="delete_device">Delete device</string>
+    <string name="update_success">Update successful !</string>
+    <string name="user_could_not_be_updated">User could not be updated</string>
+    <string name="user_has_been_updated">User has been updated</string>
+    <string name="update_fail">Update cannot be made !</string>
+    <string name="lights">Lights</string>
+    <string name="heaters">Heaters</string>
+    <string name="roller_shutter">Roller Shutter</string>
+    <string name="enter_name">Please enter text</string>
+    <string name="ok">Save</string>
+    <string name="cancel" tools:ignore="ButtonCase">Cancel</string>
+    <string name="o">o</string>
+    <string name="intensity">Intensity :</string>
+    <string name="percentage">%</string>
+    <string name="position">Position :</string>
+    <string name="device_name">Name</string>
+    <string name="device_mode">State :</string>
+    <string name="device_deleted">Device deleted</string>
+    <string name="do_you_really_want_to_delete_this_device">Confirm deletion ?</string>
+
 </resources>
