@@ -44,5 +44,6 @@
     <string name="device_mode">État :</string>
     <string name="device_deleted">Appareil supprimé</string>
     <string name="do_you_really_want_to_delete_this_device">Confirmer la suppression ?</string>
-
+    <string name="fields_incomplete">Veuillez remplir tous les champs s\'il vous plaît</string>
+    <string name="error">Erreur</string>
 </resources>

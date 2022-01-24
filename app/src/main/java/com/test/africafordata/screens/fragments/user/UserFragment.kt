@@ -2,6 +2,7 @@ package com.test.africafordata.screens.fragments.user
 
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.text.Editable
@@ -59,23 +60,50 @@ class UserFragment : DaggerFragment() {
     }
 
     private fun saveInfos() {
-
-        edit_text_birthday_user.setOnClickListener { }
         val parser = SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE)
         val date = parser.parse(edit_text_birthday_user.text.toString())!!
 
-        val user = User(
-            edit_text_first_name_user.text.toString(),
-            edit_text_last_name_user.text.toString(),
-            edit_text_city_user.text.toString(),
-            edit_text_postal_code_user.text.toString().toInt(),
-            edit_text_street_user.text.toString(),
-            edit_text_street_code_user.text.toString(),
-            edit_text_country_user.text.toString(),
-            date.time
-        )
-        user.id = 1
-        updateUser(user)
+        if((edit_text_city_user.text.toString().trim() == "")
+            || (edit_text_first_name_user.text.toString().trim() == "")
+            || (edit_text_last_name_user.text.toString().trim() == "")
+            || (edit_text_postal_code_user.text.toString().trim() == "")
+            || (edit_text_street_user.text.toString().trim() == "")
+            || (edit_text_street_code_user.text.toString().trim() == "")
+            || (edit_text_country_user.text.toString().trim() == "")
+            || (date.time.toString().trim() == "")
+            )
+        {
+            val alertDialog = activity?.let {
+                val builder = AlertDialog.Builder(it)
+                builder.apply {
+                    setMessage(R.string.fields_incomplete)
+                    setTitle(R.string.error)
+                    setPositiveButton(R.string.ok) { dialog, _ ->
+                        dialog.dismiss()
+                    }
+                }
+                builder.create()
+            }
+            alertDialog?.show()
+        }
+        else
+        {
+            edit_text_birthday_user.setOnClickListener { }
+
+            val user = User(
+                edit_text_first_name_user.text.toString(),
+                edit_text_last_name_user.text.toString(),
+                edit_text_city_user.text.toString(),
+                edit_text_postal_code_user.text.toString().toInt(),
+                edit_text_street_user.text.toString(),
+                edit_text_street_code_user.text.toString(),
+                edit_text_country_user.text.toString(),
+                date.time
+            )
+            user.id = 1
+            updateUser(user)
+        }
+
 
 
     }

@@ -43,5 +43,6 @@
     <string name="device_mode">State :</string>
     <string name="device_deleted">Device deleted</string>
     <string name="do_you_really_want_to_delete_this_device">Confirm deletion ?</string>
-
+    <string name="fields_incomplete">Please complete all fields</string>
+    <string name="error">Error</string>
 </resources>
