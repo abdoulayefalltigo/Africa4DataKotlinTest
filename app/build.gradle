@@ -87,6 +87,9 @@ dependencies {
     //seekbar dependency
     implementation 'com.xw.repo:bubbleseekbar:3.20-lite'
 
+    // Json parser to get remote json data
+    implementation 'com.android.volley:volley:1.1.0'
+
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test:rules:1.2.0'
 

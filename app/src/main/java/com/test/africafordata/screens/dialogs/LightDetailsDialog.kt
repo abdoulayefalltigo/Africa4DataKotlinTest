@@ -11,7 +11,7 @@ import com.test.africafordata.screens.fragments.home.HomeFragment
 import com.test.africafordata.utils.ListenUpdates
 import kotlinx.android.synthetic.main.light_dialog_layout.*
 
-class EditLightDialogFragment : DialogFragment() {
+class LightDetailsDialog : DialogFragment() {
 
 
     private var listener: ListenUpdates? = null
@@ -27,9 +27,9 @@ class EditLightDialogFragment : DialogFragment() {
             name: String,
             mode: String,
             intensity: Int
-        ): EditLightDialogFragment {
+        ): LightDetailsDialog {
             val mFragment =
-                EditLightDialogFragment()
+                LightDetailsDialog()
             val args = Bundle()
             args.putInt(LIGHT_ID, id)
             args.putString(LIGHT_NAME, name)

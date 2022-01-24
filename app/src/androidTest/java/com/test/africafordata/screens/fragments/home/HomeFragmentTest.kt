@@ -10,7 +10,8 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
 import com.test.africafordata.R
-import com.test.africafordata.recyclerview.DevicesAdapter
+import com.test.africafordata.adapter.DevicesAdapter
+import com.test.africafordata.screens.activities.MainActivity
 import com.test.africafordata.screens.activities.MainActivityTest
 import org.junit.After
 import org.junit.Before

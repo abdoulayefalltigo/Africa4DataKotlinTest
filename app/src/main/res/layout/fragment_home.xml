@@ -38,7 +38,7 @@
                     android:checked="true"
                     android:padding="2dp"
                     android:lines="1"
-                    android:textSize="20sp"
+                    android:textSize="16dp"
                     android:text="@string/roller_shutter"
                     tools:ignore="RelativeOverlap" />
             </LinearLayout>
@@ -56,7 +56,7 @@
                     android:layout_gravity="center_horizontal"
                     android:lines="1"
                     android:checked="true"
-                    android:textSize="20sp"
+                    android:textSize="16dp"
                     android:padding="2dp"
                     android:text="@string/lights" />
             </LinearLayout>
@@ -73,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:lines="1"
                     android:checked="true"
-                    android:textSize="20sp"
+                    android:textSize="16dp"
                     android:padding="2dp"
                     android:text="@string/heaters" />
             </LinearLayout>

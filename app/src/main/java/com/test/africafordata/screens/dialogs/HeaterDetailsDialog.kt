@@ -11,7 +11,7 @@ import com.test.africafordata.screens.fragments.home.HomeFragment
 import com.test.africafordata.utils.ListenUpdates
 import kotlinx.android.synthetic.main.heater_dialog_layout.*
 
-class EditHeaterDialogFragment : DialogFragment() {
+class HeaterDetailsDialog : DialogFragment() {
 
     private var listener: ListenUpdates? = null
 
@@ -26,9 +26,9 @@ class EditHeaterDialogFragment : DialogFragment() {
             name: String,
             mode: String,
             temperature: Double
-        ): EditHeaterDialogFragment {
+        ): HeaterDetailsDialog {
             val mFragment =
-                EditHeaterDialogFragment()
+                HeaterDetailsDialog()
             val args = Bundle()
             args.putInt(HEATER_ID, id)
             args.putString(HEATER_NAME, name)

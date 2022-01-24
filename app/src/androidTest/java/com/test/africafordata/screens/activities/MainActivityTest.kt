@@ -31,7 +31,6 @@ class MainActivityTest {
     fun testUI() {
         val activity = mActivityTestRule.activity
         assertNotNull(activity)
-        assertNotNull(activity.findViewById(R.id.nav_view))
         assertNotNull(activity.findViewById(R.id.nav_host_fragment))
     }
 
@@ -40,7 +39,6 @@ class MainActivityTest {
     fun testMinSdk() {
         val activity = mActivityTestRule.activity
         assertNotNull(activity)
-        assertNotNull(activity.findViewById(R.id.nav_view))
         assertNotNull(activity.findViewById(R.id.nav_host_fragment))
 
     }

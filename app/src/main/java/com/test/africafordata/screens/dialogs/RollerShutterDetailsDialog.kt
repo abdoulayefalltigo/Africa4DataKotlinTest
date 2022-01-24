@@ -12,7 +12,7 @@ import com.test.africafordata.screens.fragments.home.HomeFragment
 import com.test.africafordata.utils.ListenUpdates
 import kotlinx.android.synthetic.main.roller_shutter_dialog_layout.*
 
-class EditRollerShutterDialogFragment : DialogFragment() {
+class RollerShutterDetailsDialog : DialogFragment() {
 
 
     private var listener: ListenUpdates? = null
@@ -26,9 +26,9 @@ class EditRollerShutterDialogFragment : DialogFragment() {
             id: Int,
             name: String,
             position: Int
-        ): EditRollerShutterDialogFragment {
+        ): RollerShutterDetailsDialog {
             val mFragment =
-                EditRollerShutterDialogFragment()
+                RollerShutterDetailsDialog()
             val args = Bundle()
             args.putInt(ROLLER_SHUTTER_ID, id)
             args.putString(ROLLER_SHUTTER_NAME, name)

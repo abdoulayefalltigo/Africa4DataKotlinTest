@@ -21,9 +21,9 @@ import com.test.africafordata.classes.device.Heater
 import com.test.africafordata.classes.device.Light
 import com.test.africafordata.classes.device.RollerShutter
 import com.test.africafordata.adapter.DevicesAdapter
-import com.test.africafordata.screens.dialogs.EditHeaterDialogFragment
-import com.test.africafordata.screens.dialogs.EditLightDialogFragment
-import com.test.africafordata.screens.dialogs.EditRollerShutterDialogFragment
+import com.test.africafordata.screens.dialogs.HeaterDetailsDialog
+import com.test.africafordata.screens.dialogs.LightDetailsDialog
+import com.test.africafordata.screens.dialogs.RollerShutterDetailsDialog
 import com.test.africafordata.utils.ListenUpdates
 import dagger.android.support.DaggerFragment
 import io.reactivex.Completable
@@ -40,7 +40,6 @@ class HomeFragment : DaggerFragment(), ListenUpdates {
     @Inject
     lateinit var deviceAdapter: DevicesAdapter
     private var firstTimeAnimation = true
-
 
     private val itemTouchHelperCallback =
         object : ItemTouchHelper.SimpleCallback(0, RIGHT or LEFT) {
@@ -87,8 +86,6 @@ class HomeFragment : DaggerFragment(), ListenUpdates {
 
                 }
                 alertDialog?.show()
-
-
             }
 
         }
@@ -125,7 +122,7 @@ class HomeFragment : DaggerFragment(), ListenUpdates {
                 override fun onItemClick(devices: Devices) {
                     when (devices) {
                         is Light -> {
-                            val editLightDialogFragment = EditLightDialogFragment.newInstance(
+                            val editLightDialogFragment = LightDetailsDialog.newInstance(
                                 devices.id,
                                 devices.deviceName,
                                 devices.mode,
@@ -135,7 +132,7 @@ class HomeFragment : DaggerFragment(), ListenUpdates {
                         }
                         is Heater -> {
 
-                            val editHeaterDialogFragment = EditHeaterDialogFragment.newInstance(
+                            val editHeaterDialogFragment = HeaterDetailsDialog.newInstance(
                                 devices.id,
                                 devices.deviceName,
                                 devices.mode,
@@ -148,7 +145,7 @@ class HomeFragment : DaggerFragment(), ListenUpdates {
                         }
                         is RollerShutter -> {
                             val editRollerShutterDialogFragment =
-                                EditRollerShutterDialogFragment.newInstance(
+                                RollerShutterDetailsDialog.newInstance(
                                     devices.id,
                                     devices.deviceName,
                                     devices.position
@@ -175,7 +172,6 @@ class HomeFragment : DaggerFragment(), ListenUpdates {
                     recycler_view_devices.scheduleLayoutAnimation()
                     firstTimeAnimation = !firstTimeAnimation
                 }
-                //recycler_view_devices.scheduleLayoutAnimation()
             }
         }
     }
@@ -195,8 +191,6 @@ class HomeFragment : DaggerFragment(), ListenUpdates {
         } else {
             homeViewModel.uncheckedRadioHeaters()
         }
-
-
     }
 
     private fun rollerShutterClicked() {

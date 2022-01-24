@@ -3,10 +3,11 @@ package com.test.africafordata.utils
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
 import androidx.test.rule.ActivityTestRule
 import com.test.africafordata.R
-import com.test.africafordata.model.device.Heater
-import com.test.africafordata.model.device.Light
-import com.test.africafordata.model.device.RollerShutter
+import com.test.africafordata.classes.device.Heater
+import com.test.africafordata.classes.device.Light
+import com.test.africafordata.classes.device.RollerShutter
 import com.test.africafordata.room.AppDatabase.Companion.application
+import com.test.africafordata.screens.activities.MainActivity
 import com.test.africafordata.screens.activities.MainActivityTest
 import org.junit.After
 import org.junit.Assert.assertEquals
@@ -22,11 +23,11 @@ class JsonTest {
     @get:Rule
     val mActivityTestRule = ActivityTestRule(MainActivity::class.java)
 
-    lateinit var jsonUtils: JsonUtils
+    lateinit var jsonUtils: json
 
     @Before
     fun setUp() {
-        jsonUtils = JsonUtils(mActivityTestRule.activity.application)
+        jsonUtils = json(mActivityTestRule.activity.application)
     }
 
     @After
@@ -62,9 +63,4 @@ class JsonTest {
         assertNotNull(application)
     }
 
-    @Test
-    fun fileExists(){
-        val file = application.resources.openRawResource(R.raw.jsondata)
-        assertNotNull(file)
-    }
 }

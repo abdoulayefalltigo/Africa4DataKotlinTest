@@ -8,6 +8,7 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
 import com.test.africafordata.R
+import com.test.africafordata.screens.activities.MainActivity
 import com.test.africafordata.screens.activities.MainActivityTest
 import org.hamcrest.CoreMatchers.not
 import org.junit.Rule
@@ -28,7 +29,6 @@ class UserFragmentTest {
         onView(withId(R.id.edit_text_first_name_user))
             .check(matches(isDisplayed()))
         onView(withId(R.id.hello_user_name)).check(matches(isDisplayed()))
-        onView(withId(R.id.enable_edit_user_info)).check(matches(isDisplayed()))
         onView(withId(R.id.edit_text_last_name_user)).check(matches(isDisplayed()))
         onView(withId(R.id.edit_text_birthday_user)).check(matches(isDisplayed()))
         onView(withId(R.id.edit_text_street_code_user)).perform(scrollTo())
@@ -77,7 +77,6 @@ class UserFragmentTest {
     @Test
     fun editButtonClicked() {
         onView(withId(R.id.navigation_user)).perform(click())
-        onView(withId(R.id.enable_edit_user_info)).perform(click())
         onView(withId(R.id.edit_text_first_name_user))
             .check(matches(isEnabled()))
         onView(withId(R.id.edit_text_last_name_user)).check(matches(isEnabled()))
@@ -99,7 +98,6 @@ class UserFragmentTest {
     @Test
     fun editButtonGoneAgain() {
         onView(withId(R.id.navigation_user)).perform(click())
-        onView(withId(R.id.enable_edit_user_info)).perform(click())
         onView(withId(R.id.save_user_button)).perform(click())
         onView(withId(R.id.save_user_button)).check(matches(not(isDisplayed())))
     }

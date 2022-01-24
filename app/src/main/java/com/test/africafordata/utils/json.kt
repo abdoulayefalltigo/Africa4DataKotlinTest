@@ -1,6 +1,7 @@
 package com.test.africafordata.utils
 
 import android.app.Application
+import android.util.Log
 import com.test.africafordata.R
 import com.test.africafordata.classes.User
 import com.test.africafordata.classes.device.Devices
@@ -8,6 +9,8 @@ import com.test.africafordata.classes.device.Heater
 import com.test.africafordata.classes.device.Light
 import com.test.africafordata.classes.device.RollerShutter
 import org.json.JSONObject
+import java.lang.Thread.sleep
+import java.net.URL
 import java.nio.charset.Charset
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -16,16 +19,12 @@ import javax.inject.Singleton
 @Singleton
 class json @Inject constructor(val application: Application) {
 
-    private fun readFile(): String {
-        val ins = application.resources.openRawResource(R.raw.jsondata)
-
-        return ins.readBytes().toString(Charset.defaultCharset())
-    }
-
     fun parseDevices(): ArrayList<Devices> {
         val deviceList = ArrayList<Devices>()
-        val jsonFile = readFile()
 
+        val jsonFile = URL("http://storage42.com/modulotest/data.json").readText()
+
+        Log.d("TEST LOG", jsonFile)
         val mainJson = JSONObject(jsonFile)
 
         val devicesJsonArray = mainJson.getJSONArray("devices")
@@ -66,7 +65,7 @@ class json @Inject constructor(val application: Application) {
     }
 
     fun parseUser(): User {
-        val jsonFile = readFile()
+        val jsonFile = URL("http://storage42.com/modulotest/data.json").readText()
         val mainJson = JSONObject(jsonFile)
         val userJson = mainJson.getJSONObject("user")
         val address = userJson.getJSONObject("address")
