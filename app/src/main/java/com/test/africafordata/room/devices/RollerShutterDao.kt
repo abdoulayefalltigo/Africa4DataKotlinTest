@@ -2,7 +2,7 @@ package com.test.africafordata.room.devices
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.test.africafordata.classes.device.RollerShutter
+import com.test.africafordata.model.device.RollerShutter
 
 
 @Dao

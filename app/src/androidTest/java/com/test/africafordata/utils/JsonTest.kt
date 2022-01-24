@@ -2,13 +2,11 @@ package com.test.africafordata.utils
 
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
 import androidx.test.rule.ActivityTestRule
-import com.test.africafordata.R
-import com.test.africafordata.classes.device.Heater
-import com.test.africafordata.classes.device.Light
-import com.test.africafordata.classes.device.RollerShutter
+import com.test.africafordata.model.device.Heater
+import com.test.africafordata.model.device.Light
+import com.test.africafordata.model.device.RollerShutter
 import com.test.africafordata.room.AppDatabase.Companion.application
-import com.test.africafordata.screens.activities.MainActivity
-import com.test.africafordata.screens.activities.MainActivityTest
+import com.test.africafordata.ui.activities.MainActivity
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull

@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.test.africafordata.R
-import com.test.africafordata.classes.device.Devices
-import com.test.africafordata.classes.device.Heater
-import com.test.africafordata.classes.device.Light
-import com.test.africafordata.classes.device.RollerShutter
+import com.test.africafordata.model.device.Devices
+import com.test.africafordata.model.device.Heater
+import com.test.africafordata.model.device.Light
+import com.test.africafordata.model.device.RollerShutter
 import kotlinx.android.synthetic.main.heater_item.view.*
 import kotlinx.android.synthetic.main.light_item.view.*
 import kotlinx.android.synthetic.main.roller_shutter_item.view.*

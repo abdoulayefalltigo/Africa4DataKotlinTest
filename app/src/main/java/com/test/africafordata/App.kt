@@ -1,6 +1,6 @@
 package com.test.africafordata
 
-import com.test.africafordata.dagger.DaggerAppComponent
+import com.test.africafordata.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
 

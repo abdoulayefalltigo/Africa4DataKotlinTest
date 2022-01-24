@@ -2,7 +2,7 @@ package com.test.africafordata.room.user
 
 import android.app.Application
 import androidx.lifecycle.LiveData
-import com.test.africafordata.classes.User
+import com.test.africafordata.model.User
 import com.test.africafordata.room.AppDatabase
 import javax.inject.Inject
 

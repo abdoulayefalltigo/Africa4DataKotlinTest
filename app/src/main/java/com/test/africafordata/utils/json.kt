@@ -2,16 +2,13 @@ package com.test.africafordata.utils
 
 import android.app.Application
 import android.util.Log
-import com.test.africafordata.R
-import com.test.africafordata.classes.User
-import com.test.africafordata.classes.device.Devices
-import com.test.africafordata.classes.device.Heater
-import com.test.africafordata.classes.device.Light
-import com.test.africafordata.classes.device.RollerShutter
+import com.test.africafordata.model.User
+import com.test.africafordata.model.device.Devices
+import com.test.africafordata.model.device.Heater
+import com.test.africafordata.model.device.Light
+import com.test.africafordata.model.device.RollerShutter
 import org.json.JSONObject
-import java.lang.Thread.sleep
 import java.net.URL
-import java.nio.charset.Charset
 import javax.inject.Inject
 import javax.inject.Singleton
 

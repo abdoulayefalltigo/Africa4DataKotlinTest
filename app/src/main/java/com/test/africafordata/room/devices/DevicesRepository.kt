@@ -3,10 +3,10 @@ package com.test.africafordata.room.devices
 
 import android.app.Application
 import androidx.lifecycle.MediatorLiveData
-import com.test.africafordata.classes.device.Devices
-import com.test.africafordata.classes.device.Heater
-import com.test.africafordata.classes.device.Light
-import com.test.africafordata.classes.device.RollerShutter
+import com.test.africafordata.model.device.Devices
+import com.test.africafordata.model.device.Heater
+import com.test.africafordata.model.device.Light
+import com.test.africafordata.model.device.RollerShutter
 import com.test.africafordata.room.AppDatabase
 import javax.inject.Inject
 

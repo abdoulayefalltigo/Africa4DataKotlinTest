@@ -7,11 +7,11 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.test.africafordata.App
-import com.test.africafordata.dagger.DaggerAppComponent
-import com.test.africafordata.classes.User
-import com.test.africafordata.classes.device.Heater
-import com.test.africafordata.classes.device.Light
-import com.test.africafordata.classes.device.RollerShutter
+import com.test.africafordata.di.DaggerAppComponent
+import com.test.africafordata.model.User
+import com.test.africafordata.model.device.Heater
+import com.test.africafordata.model.device.Light
+import com.test.africafordata.model.device.RollerShutter
 import com.test.africafordata.room.devices.HeaterDao
 import com.test.africafordata.room.devices.LightDao
 import com.test.africafordata.room.devices.RollerShutterDao
