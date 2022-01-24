@@ -27,4 +27,4 @@ This app is for testing my skills in Kotlin - Let's go !
 - Langage used : Kotlin
 
 --------------------------------- END ---------------------------------------------
-I am sure this app can be better so feel free to ask me changes, i would be great to apply them.
+I am sure this app can be better so feel free to ask me changes, it would be great to apply them.
