@@ -36,6 +36,29 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    signingConfigs {
+
+        release {
+            storeFile file('android.keystore')
+            storePassword "africafordata"
+            keyAlias "africafordata"
+            keyPassword "africafordata"
+        }
+    }
+
+    buildTypes {
+
+        release {
+
+            signingConfig signingConfigs.release
+        }
+    }
 }
 
 dependencies {

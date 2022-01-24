@@ -87,33 +87,37 @@
 
                 <LinearLayout
 
-                    android:layout_width="396dp"
-                    android:layout_height="116dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="166dp"
                     android:layout_marginTop="20dp"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/intensity_text_view_roller_shutter"
                         android:layout_width="wrap_content"
 
                         android:layout_height="wrap_content"
-                        android:text="@string/position"
+                        android:layout_gravity="center_vertical"
 
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/position"
                         android:textColor="#ffff"
                         android:textSize="16sp" />
 
 
                     <com.xw.repo.BubbleSeekBar
                         android:id="@+id/device_seek_bar_roller_shutter"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:rotation="270"
                         app:bsb_hide_bubble="true"
+                        android:layout_marginTop="10dp"
                         app:bsb_max="100"
                         app:bsb_min="0"
                         app:bsb_progress="0"
                         app:bsb_second_track_color="#48912E"
-                        app:bsb_section_count="5"
+                        app:bsb_section_count="10"
                         app:bsb_section_text_position="bottom_sides"
                         app:bsb_show_progress_in_float="false"
                         app:bsb_show_section_mark="true"
