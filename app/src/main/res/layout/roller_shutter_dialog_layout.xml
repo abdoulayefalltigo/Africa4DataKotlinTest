@@ -104,27 +104,35 @@
                         android:textColor="#ffff"
                         android:textSize="16sp" />
 
-
-                    <com.xw.repo.BubbleSeekBar
+                    <hearsilent.discreteslider.DiscreteSlider
                         android:id="@+id/device_seek_bar_roller_shutter"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:rotation="270"
-                        app:bsb_hide_bubble="true"
-                        android:layout_marginTop="10dp"
-                        app:bsb_max="100"
-                        app:bsb_min="0"
-                        app:bsb_progress="0"
-                        app:bsb_second_track_color="#48912E"
-                        app:bsb_section_count="10"
-                        app:bsb_section_text_position="bottom_sides"
-                        app:bsb_show_progress_in_float="false"
-                        app:bsb_show_section_mark="true"
-                        app:bsb_show_section_text="true"
-                        app:bsb_show_thumb_text="true"
-                        app:bsb_track_color="#2DF458" />
-
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingLeft="66dp"
+                        android:paddingRight="66dp"
+                        android:paddingVertical="15dp"
+                        app:ds_count="101"
+                        app:ds_inactiveTrackColor="@color/colorPrimary"
+                        app:ds_minProgress="0"
+                        app:ds_maxProgress="100"
+                        app:ds_orientation="vertical"
+                        app:ds_mode="normal"
+                        app:ds_thumbColor="@color/colorPrimary"
+                        app:ds_thumbPressedColor="#1FD81B60"
+                        app:ds_thumbRadius="6dp"
+                        app:ds_tickMarkColor="#3DFFFFFF"
+                        app:ds_tickMarkDashLength="1dp"
+                        app:ds_tickMarkInactiveColor="#1FD81B60"
+                        app:ds_tickMarkPatterns="dot,dash"
+                        app:ds_trackColor="#3DD81B60"
+                        app:ds_trackWidth="2dp"
+                        app:ds_valueLabelMode="showOnPressHold"
+                        app:ds_valueLabelDuration="2500"
+                        app:ds_tickMarkStep="10"
+                        app:ds_valueLabelTextColor="#FFF"
+                        app:ds_valueLabelTextSize="13sp" />
 
                 </LinearLayout>
 

@@ -113,6 +113,9 @@ dependencies {
     // Json parser to get remote json data
     implementation 'com.android.volley:volley:1.1.0'
 
+    //DiscreteSlider to vertical Roller (specific case)
+    implementation 'com.github.hearsilent:DiscreteSlider:1.2.1'
+
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test:rules:1.2.0'
 

@@ -56,10 +56,8 @@ class RollerShutterDetailsDialog : DialogFragment() {
         val intensity = arguments!!.getInt(ROLLER_SHUTTER_POSITION)
         device_name_input_roller_shutter.setText(name)
 
-
-
-
-        device_seek_bar_roller_shutter.setProgress(intensity.toFloat())
+        //Le référenciel est fermé (Du haut vers le bas !)
+        device_seek_bar_roller_shutter.setProgress(intensity.toFloat().toInt())
 
         action_ok_roller_shutter.setOnClickListener {
 
@@ -67,13 +65,13 @@ class RollerShutterDetailsDialog : DialogFragment() {
                     name,
                     device_name_input_roller_shutter.text.toString(),
                     intensity,
-                    device_seek_bar_roller_shutter.progress
+                    100 - device_seek_bar_roller_shutter.progress
                 )
             ) {
                 listener?.rollerShutterUpdated(
                     id,
                     device_name_input_roller_shutter.text.toString(),
-                    device_seek_bar_roller_shutter.progress
+                    100 - device_seek_bar_roller_shutter.progress
                 )
             }
             dialog?.dismiss()
